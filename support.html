@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support &amp; Player Guide — Aerithal</title>
+  <meta name="description" content="Official Support, controls, macOS requirements, and Same-Wi-Fi co-op troubleshooting for Aerithal by Keegan Porter / Krise Media.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%23161028'/%3E%3Cpath d='M8 2L10 6L14 8L10 10L8 14L6 10L2 8L6 6Z' fill='%23f2c255'/%3E%3Crect x='7' y='7' width='2' height='2' fill='%2378f8ff'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #0b0910;
+      --surface: #14101d;
+      --surface2: #1c1628;
+      --border: #3a2e4a;
+      --ink: #f4ecd8;
+      --dim: #c6baa0;
+      --mute: #8e826e;
+      --gold: #f2c255;
+      --gold2: #c4902b;
+      --teal: #5fe3d0;
+      --green: #7ce06a;
+      --mono: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(ellipse 80% 45% at 50% -10%, rgba(102, 72, 148, 0.24), transparent 70%),
+        radial-gradient(ellipse 50% 35% at 85% 15%, rgba(242, 194, 85, 0.08), transparent 60%),
+        var(--bg);
+      display: flex;
+      flex-direction: column;
+    }
+    a { color: var(--teal); text-decoration: none; }
+    a:hover { color: var(--gold); text-decoration: underline; }
+    header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(11, 9, 16, 0.88);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav-wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--mono);
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+    .brand:hover { text-decoration: none; color: #ffe39b; }
+    .diamond {
+      width: 12px;
+      height: 12px;
+      background: var(--teal);
+      transform: rotate(45deg);
+      box-shadow: 0 0 0 2px var(--gold), 0 0 10px rgba(95, 227, 208, 0.45);
+      flex-shrink: 0;
+    }
+    nav { display: flex; gap: 18px; flex-wrap: wrap; font-size: 0.92rem; }
+    nav a { color: var(--dim); padding: 4px 2px; border-bottom: 2px solid transparent; }
+    nav a:hover { color: var(--ink); text-decoration: none; }
+    nav a.active { color: var(--gold); border-bottom-color: var(--gold); font-weight: 600; }
+    main { max-width: 920px; width: 100%; margin: 0 auto; padding: 40px 24px 64px; flex: 1; }
+    .hero { margin-bottom: 30px; }
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 8px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.9rem, 4vw, 2.5rem);
+      line-height: 1.2;
+      color: var(--gold);
+    }
+    .lead { color: var(--dim); font-size: 1.04rem; margin: 0; max-width: 680px; }
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin: 24px 0 30px;
+    }
+    .spec {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 15px 17px;
+    }
+    .spec span {
+      display: block;
+      font-family: var(--mono);
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--teal);
+      margin-bottom: 4px;
+    }
+    .spec strong { color: var(--ink); font-size: 0.95rem; }
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 26px 28px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin: 0 0 14px;
+      font-size: 1.22rem;
+      color: var(--gold);
+      border-bottom: 1px solid rgba(58, 46, 74, 0.7);
+      padding-bottom: 8px;
+    }
+    h3 { margin: 20px 0 10px; font-size: 1rem; color: var(--teal); }
+    p { margin: 0 0 12px; color: var(--dim); }
+    p:last-child { margin-bottom: 0; }
+    ul, ol { margin: 0 0 12px; padding-left: 20px; color: var(--dim); }
+    ul:last-child, ol:last-child { margin-bottom: 0; }
+    li { margin-bottom: 8px; }
+    li strong { color: var(--ink); }
+    .table-wrap { overflow-x: auto; margin-top: 8px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(58, 46, 74, 0.7);
+      color: var(--dim);
+    }
+    th {
+      color: var(--gold);
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background: var(--surface2);
+    }
+    td:first-child { color: var(--ink); }
+    kbd, code {
+      font-family: var(--mono);
+      font-size: 0.84em;
+      background: var(--surface2);
+      color: var(--teal);
+      padding: 2px 7px;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      white-space: nowrap;
+    }
+    kbd { color: var(--gold); border-bottom-width: 2px; }
+    .contact-box {
+      background: linear-gradient(135deg, rgba(242, 194, 85, 0.12), rgba(95, 227, 208, 0.08));
+      border: 1px solid var(--gold2);
+      border-radius: 12px;
+      padding: 24px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 20px;
+      border-radius: 8px;
+      font-family: var(--mono);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      background: linear-gradient(180deg, #f5cd63, #c4902b);
+      color: #1e1305;
+      border: 1px solid #ffe49c;
+    }
+    .btn:hover { text-decoration: none; filter: brightness(1.08); color: #1e1305; }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      text-align: center;
+      color: var(--mute);
+      font-size: 0.86rem;
+    }
+    footer .links { margin-top: 8px; display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; }
+    @media (max-width: 600px) {
+      main { padding: 28px 16px 48px; }
+      section { padding: 20px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-wrap">
+      <a class="brand" href="index.html"><span class="diamond" aria-hidden="true"></span>Aerithal</a>
+      <nav aria-label="Legal navigation">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="support.html" class="active" aria-current="page">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="eyebrow">App Store Support &amp; Help Center</div>
+      <h1>Aerithal Support</h1>
+      <p class="lead">Everything you need to explore all five realms, customize controls, host Same-Wi-Fi co-op with up to 6 friends, and keep your Mac running smoothly.</p>
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec">
+        <span>macOS Requirement</span>
+        <strong>macOS 13.0 Ventura or later</strong>
+      </div>
+      <div class="spec">
+        <span>Mac Hardware</span>
+        <strong>Apple Silicon (M1 or newer)</strong>
+      </div>
+      <div class="spec">
+        <span>Multiplayer</span>
+        <strong>Solo Offline or 1–6 Same-Wi-Fi Co-op</strong>
+      </div>
+      <div class="spec">
+        <span>Controllers</span>
+        <strong>Xbox &amp; PlayStation (Bluetooth / USB)</strong>
+      </div>
+    </div>
+
+    <section>
+      <h2>Getting Started</h2>
+      <ol>
+        <li><strong>Character Setup:</strong> On first launch, choose your display name and pick a <strong>Preset</strong> hero or design a <strong>Custom</strong> voxel skin, then click the gold checkmark.</li>
+        <li><strong>Create a World:</strong> Click <strong>Play</strong> &rarr; click the <strong>+</strong> card &rarr; enter a world name (and optional seed) &rarr; click <strong>Create</strong>.</li>
+        <li><strong>Craft &amp; Progress:</strong> Mine wood and stone with <strong>Left Click</strong>, open Inventory &amp; Crafting with <kbd>E</kbd>, place a <strong>Workbench</strong> with <strong>Right Click</strong>, and unlock seven crafting stations as you advance across five realms.</li>
+        <li><strong>Auto-Save:</strong> Press <kbd>Esc</kbd> anytime to pause, open Settings, or exit safely. Worlds automatically save when pausing, returning to the menu, or closing the app.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Controls &amp; Keybindings</h2>
+      <p>All keyboard and auxiliary-mouse bindings can be customized under <strong>Settings &rarr; Controls</strong> (click <strong>Reset</strong> to restore defaults).</p>
+
+      <h3>Keyboard &amp; Mouse Defaults</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Action</th><th>Default Binding</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Move</td><td><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd></td></tr>
+            <tr><td>Look</td><td>Mouse</td></tr>
+            <tr><td>Jump / Swim Up / Roc Climb</td><td><kbd>Space</kbd></td></tr>
+            <tr><td>Sprint / Roc Boost</td><td><kbd>L-Shift</kbd> (or double-tap <kbd>W</kbd>)</td></tr>
+            <tr><td>Sneak / Crouch / Edge-Guard / Roc Descend &amp; Dismount</td><td><kbd>F</kbd></td></tr>
+            <tr><td>Prone / Crawl (low cavern tunnels)</td><td><kbd>L-Ctrl</kbd></td></tr>
+            <tr><td>Dodge Dash</td><td><kbd>L-Alt</kbd> (Option)</td></tr>
+            <tr><td>Mine / Sculpt / Attack</td><td>Left Click</td></tr>
+            <tr><td>Place / Use / Interact / Eat / Bow / Board Boat or Roc</td><td>Right Click</td></tr>
+            <tr><td>Pick Block (Eyedropper)</td><td>Middle Click (<kbd>Mouse 3</kbd>)</td></tr>
+            <tr><td>Inventory &amp; Crafting</td><td><kbd>E</kbd></td></tr>
+            <tr><td>Hotbar Selection</td><td><kbd>1</kbd>–<kbd>9</kbd> or Scroll Wheel</td></tr>
+            <tr><td>Drop Held Item</td><td><kbd>Q</kbd></td></tr>
+            <tr><td>Sculpting Brush Size / Brush Shape</td><td><kbd>R</kbd> / <kbd>V</kbd></td></tr>
+            <tr><td>Symmetry Mirror Build / Undo Last Build Stroke</td><td><kbd>X</kbd> / <kbd>Z</kbd></td></tr>
+            <tr><td>World Atlas Map (Surface &amp; Caverns)</td><td><kbd>M</kbd></td></tr>
+            <tr><td>Co-op Waypoint Ping / Whistle Tamed Roc</td><td><kbd>C</kbd> / <kbd>G</kbd></td></tr>
+            <tr><td>Camera View (1st / 3rd Behind / 3rd Front)</td><td><kbd>F5</kbd></td></tr>
+            <tr><td>Player Roster / Toggle HUD / Debug Info</td><td>Hold <kbd>Tab</kbd> / <kbd>F1</kbd> / <kbd>F3</kbd></td></tr>
+            <tr><td>Pause (Auto-Save) / Fullscreen</td><td><kbd>Esc</kbd> / <kbd>Cmd+F</kbd> or <kbd>F11</kbd></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Xbox &amp; PlayStation Controllers (Bluetooth &amp; USB)</h3>
+      <p>Pair your controller in <strong>System Settings &rarr; Bluetooth</strong> or connect over USB. Aerithal uses Apple's native <code>GameController.framework</code> automatically.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Action</th><th>Xbox</th><th>PlayStation</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Move / Look</td><td>Left Stick / Right Stick</td><td>Left Stick / Right Stick</td></tr>
+            <tr><td>Mine / Attack &middot; Place / Interact</td><td><kbd>RT</kbd> &middot; <kbd>LT</kbd></td><td><kbd>R2</kbd> &middot; <kbd>L2</kbd></td></tr>
+            <tr><td>Jump / Roc Climb &middot; Sneak / Dismount</td><td><kbd>A</kbd> &middot; <kbd>B</kbd></td><td><kbd>&#10005;</kbd> &middot; <kbd>&#9675;</kbd></td></tr>
+            <tr><td>Sprint / Roc Boost &middot; Pick Block</td><td><kbd>L3</kbd> &middot; <kbd>R3</kbd></td><td><kbd>L3</kbd> &middot; <kbd>R3</kbd></td></tr>
+            <tr><td>Hotbar Prev / Next</td><td><kbd>LB</kbd> / <kbd>RB</kbd></td><td><kbd>L1</kbd> / <kbd>R1</kbd></td></tr>
+            <tr><td>Inventory &amp; Crafting &middot; Brush Size</td><td><kbd>Y</kbd> &middot; <kbd>X</kbd></td><td><kbd>&#9651;</kbd> &middot; <kbd>&#9633;</kbd></td></tr>
+            <tr><td>Brush Shape / Whistle / Drop / Camera</td><td><kbd>D-Pad Left / Up / Down / Right</kbd></td><td><kbd>D-Pad Left / Up / Down / Right</kbd></td></tr>
+            <tr><td>Pause &middot; Player Roster</td><td><kbd>Menu</kbd> &middot; Hold <kbd>View</kbd></td><td><kbd>Options</kbd> &middot; Hold <kbd>Share / Create</kbd></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Same-Wi-Fi Co-op Troubleshooting</h2>
+      <p>Up to 6 friends on the same Wi-Fi network can play together with zero server setup. If a hosted world does not appear on the Title or Join screen:</p>
+      <ol>
+        <li><strong>Check Wi-Fi Network:</strong> Make sure all Macs are on the exact same Wi-Fi network (avoid hotel/campus guest networks with Client Isolation enabled).</li>
+        <li><strong>Enable Wi-Fi Co-op:</strong> On the host Mac, open <strong>Settings</strong> or the <strong>Pause</strong> menu and ensure <strong>Wi-Fi Co-op</strong> (globe icon) is toggled on.</li>
+        <li><strong>Allow Local Network Access:</strong> Open <strong>System Settings &rarr; Privacy &amp; Security &rarr; Local Network</strong> and verify <strong>Aerithal</strong> is toggled on for all participating Macs.</li>
+        <li><strong>Check macOS Firewall:</strong> Under <strong>System Settings &rarr; Network &rarr; Firewall</strong>, ensure Aerithal is allowed to accept incoming connections.</li>
+        <li><strong>Match Versions:</strong> All players must run the same version and build of Aerithal. Update from the Mac App Store if you see a <em>Version Mismatch</em> or <em>Update Required</em> notice.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Gameplay, Performance &amp; Save Data FAQ</h2>
+      <ul>
+        <li><strong>How do I reach the next realm?</strong> Craft each boss's summoning relic at a Summoning Altar, summon and defeat the boss, and craft the next realm's <strong>Keystone</strong> from its dropped heart. Place the Keystone on open ground to raise a glowing Waystone Sanctuary Pool.</li>
+        <li><strong>How do I ride Boats and Rocs?</strong> Right Click water with a crafted <strong>Wooden Boat</strong> to launch, Right Click to board, <kbd>F</kbd> to dismount, and <kbd>F</kbd> + Right Click to pick it back up. After defeating <em>Tempest, Lord of the Roc</em> in Skyreach, feed wild Rocs <strong>Roc Treats</strong>, equip a <strong>Saddle</strong>, and Right Click to fly.</li>
+        <li><strong>Boosting Frame Rate:</strong> In <strong>Settings</strong>, reduce <strong>View</strong> distance (<code>4</code>–<code>16</code>) or switch <strong>Shaders</strong> off for smoother performance on battery power.</li>
+        <li><strong>Where are my saves stored?</strong> Locally in your macOS App Sandbox at <code>~/Library/Containers/com.krisemedia.aerithal/Data/Library/Application Support/Aerithal/</code>. Back up your Mac with Time Machine to protect worlds.</li>
+        <li><strong>How do I delete a world?</strong> On the <strong>Worlds</strong> screen, hover over a world card and press and hold the <strong>&times;</strong> button until the red meter fills.</li>
+      </ul>
+    </section>
+
+    <div class="contact-box">
+      <div>
+        <h2 style="border:0; padding:0; margin:0 0 6px;">Still Need Help?</h2>
+        <p style="margin:0;">Include your macOS version, Mac model, and Aerithal version (from <strong>Aerithal &rarr; About Aerithal</strong>).</p>
+      </div>
+      <a class="btn" href="mailto:k.rise.media@gmail.com?subject=Aerithal%20macOS%20Support">Email Support &rarr;</a>
+    </div>
+  </main>
+
+  <footer>
+    <div>&copy; 2026 Keegan Porter / Krise Media. All rights reserved.</div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="support.html">Support</a>
+    </div>
+  </footer>
+</body>
+</html>

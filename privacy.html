@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Aerithal</title>
+  <meta name="description" content="Privacy Policy for Aerithal on macOS by Keegan Porter / Krise Media. Zero data collection, local saves, Same-Wi-Fi LAN co-op only.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%23161028'/%3E%3Cpath d='M8 2L10 6L14 8L10 10L8 14L6 10L2 8L6 6Z' fill='%23f2c255'/%3E%3Crect x='7' y='7' width='2' height='2' fill='%2378f8ff'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #0b0910;
+      --surface: #14101d;
+      --surface2: #1c1628;
+      --border: #3a2e4a;
+      --border-hi: #584670;
+      --ink: #f4ecd8;
+      --dim: #c6baa0;
+      --mute: #8e826e;
+      --gold: #f2c255;
+      --gold-dim: #c4902b;
+      --teal: #5fe3d0;
+      --green: #7ce06a;
+      --mono: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(ellipse 80% 45% at 50% -10%, rgba(102, 72, 148, 0.24), transparent 70%),
+        radial-gradient(ellipse 50% 35% at 85% 15%, rgba(242, 194, 85, 0.08), transparent 60%),
+        var(--bg);
+      display: flex;
+      flex-direction: column;
+    }
+    a { color: var(--teal); text-decoration: none; }
+    a:hover { color: var(--gold); text-decoration: underline; }
+    header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(11, 9, 16, 0.88);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav-wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--mono);
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+    .brand:hover { text-decoration: none; color: #ffe39b; }
+    .diamond {
+      width: 12px;
+      height: 12px;
+      background: var(--teal);
+      transform: rotate(45deg);
+      box-shadow: 0 0 0 2px var(--gold), 0 0 10px rgba(95, 227, 208, 0.45);
+      flex-shrink: 0;
+    }
+    nav { display: flex; gap: 18px; flex-wrap: wrap; font-size: 0.92rem; }
+    nav a { color: var(--dim); padding: 4px 2px; border-bottom: 2px solid transparent; }
+    nav a:hover { color: var(--ink); text-decoration: none; }
+    nav a.active { color: var(--gold); border-bottom-color: var(--gold); font-weight: 600; }
+    main { max-width: 880px; width: 100%; margin: 0 auto; padding: 40px 24px 64px; flex: 1; }
+    .hero { margin-bottom: 32px; }
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 8px;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(1.9rem, 4vw, 2.5rem);
+      line-height: 1.2;
+      color: var(--gold);
+      letter-spacing: 0.02em;
+    }
+    .meta { color: var(--mute); font-size: 0.9rem; font-family: var(--mono); }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+      margin: 26px 0 34px;
+    }
+    .pill-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+    .pill-card strong {
+      display: block;
+      color: var(--green);
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .pill-card p { margin: 0; color: var(--dim); font-size: 0.9rem; }
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 26px 28px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin: 0 0 14px;
+      font-size: 1.22rem;
+      color: var(--gold);
+      border-bottom: 1px solid rgba(58, 46, 74, 0.7);
+      padding-bottom: 8px;
+    }
+    h3 { margin: 18px 0 8px; font-size: 1rem; color: var(--teal); }
+    p { margin: 0 0 12px; color: var(--dim); }
+    p:last-child { margin-bottom: 0; }
+    ul { margin: 0 0 12px; padding-left: 20px; color: var(--dim); }
+    ul:last-child { margin-bottom: 0; }
+    li { margin-bottom: 8px; }
+    li strong { color: var(--ink); }
+    code {
+      font-family: var(--mono);
+      font-size: 0.86em;
+      background: var(--surface2);
+      color: var(--teal);
+      padding: 2px 6px;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+    }
+    .callout {
+      background: rgba(95, 227, 208, 0.07);
+      border-left: 3px solid var(--teal);
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      margin: 14px 0;
+      color: var(--ink);
+      font-size: 0.94rem;
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      text-align: center;
+      color: var(--mute);
+      font-size: 0.86rem;
+    }
+    footer .links { margin-top: 8px; display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; }
+    @media (max-width: 600px) {
+      main { padding: 28px 16px 48px; }
+      section { padding: 20px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-wrap">
+      <a class="brand" href="index.html"><span class="diamond" aria-hidden="true"></span>Aerithal</a>
+      <nav aria-label="Legal navigation">
+        <a href="index.html">Home</a>
+        <a href="privacy.html" class="active" aria-current="page">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="eyebrow">App Store Privacy Policy</div>
+      <h1>Privacy Policy</h1>
+      <div class="meta">Effective Date: November 24, 2026 &middot; Aerithal for macOS (com.krisemedia.aerithal)</div>
+    </div>
+
+    <div class="summary-grid" aria-label="Privacy highlights">
+      <div class="pill-card">
+        <strong>Data Not Collected</strong>
+        <p>Zero personal data is collected, tracked, sold, or transmitted to Krise Media.</p>
+      </div>
+      <div class="pill-card">
+        <strong>No Accounts or Ads</strong>
+        <p>No sign-in, no analytics, no crash-reporting SDKs, and no advertisements.</p>
+      </div>
+      <div class="pill-card">
+        <strong>100% Local Saves</strong>
+        <p>Worlds, character skins, and settings stay inside your Mac's sandbox.</p>
+      </div>
+      <div class="pill-card">
+        <strong>Same-Wi-Fi LAN Only</strong>
+        <p>Optional co-op runs strictly over your private local network—no internet servers.</p>
+      </div>
+    </div>
+
+    <section>
+      <h2>1. Data Collected by Krise Media</h2>
+      <p><strong>None.</strong> Keegan Porter / Krise Media does not collect any personal or usage data from Aerithal. In accordance with our embedded Apple Privacy Manifest (<code>PrivacyInfo.xcprivacy</code>):</p>
+      <ul>
+        <li><strong>Tracking:</strong> Disabled (<code>NSPrivacyTracking = false</code>).</li>
+        <li><strong>Tracking Domains:</strong> None.</li>
+        <li><strong>Collected Data Types:</strong> None (App Store Privacy Label: <em>Data Not Collected</em>).</li>
+      </ul>
+      <p>Aerithal makes <strong>no outbound internet connections</strong> during solo or local co-op play.</p>
+    </section>
+
+    <section>
+      <h2>2. Data Stored Locally on Your Mac</h2>
+      <p>Aerithal saves your progress and preferences strictly inside your macOS App Sandbox container (<code>~/Library/Containers/com.krisemedia.aerithal/Data/Library/Application Support/Aerithal/</code>):</p>
+      <ul>
+        <li><strong>World Saves (IndexedDB — <code>aerithal</code>):</strong> World names, seeds, creation and last-played timestamps, time of day, boss progression, preview thumbnails, voxel block edits across all five realms, chest inventories, entities, and player positions/inventories.</li>
+        <li><strong>Player Profile (<code>localStorage</code>):</strong> A locally generated random UUID, your chosen in-game display name, and your preset or custom character skin.</li>
+        <li><strong>Settings (<code>localStorage</code>):</strong> Audio volume levels, view distance, FOV, mouse sensitivity, invert-Y preference, shader toggle, Wi-Fi Co-op toggle, mount camera preference, and custom keybindings.</li>
+      </ul>
+      <div class="callout">
+        <strong>Your Control:</strong> Delete any world from the <strong>Worlds</strong> screen by hovering over its card and holding the <strong>&times;</strong> button. Uninstalling Aerithal removes the app; removing its sandbox container deletes all local data. Krise Media has no access to your files.
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Optional Same-Wi-Fi (LAN) Co-op Networking</h2>
+      <p>Aerithal includes optional co-op play for up to 6 players <strong>strictly over your local Wi-Fi (LAN) network</strong>. Aerithal does not connect to internet matchmaking servers, public lobbies, or third-party WebRTC relays.</p>
+      <ul>
+        <li><strong>macOS Local Network Permission:</strong> macOS asks for Local Network access so friends on the same Wi-Fi can discover and join your world. Solo play works completely offline even if you decline this permission or disable <strong>Wi-Fi Co-op</strong>.</li>
+        <li><strong>Hosting Discovery:</strong> When <strong>Wi-Fi Co-op</strong> is enabled in <strong>Settings</strong> or the <strong>Pause</strong> menu while hosting a world, Aerithal broadcasts small local-only UDP discovery packets (port <code>41234</code>, multicast <code>239.255.42.99</code>, and local subnet broadcast) containing the world name, your chosen display name, player count, app version/build, a random per-launch instance ID, and the host's local TCP port.</li>
+        <li><strong>Joining &amp; Private-Network Enforcement:</strong> On the Title and Join screens, Aerithal sends a local UDP probe to list active worlds on your Wi-Fi network and joins via direct local TCP. Aerithal enforces a strict private-IP filter (RFC 1918, link-local, and loopback addresses only) so co-op traffic never leaves your local network.</li>
+        <li><strong>Shared Session Information:</strong> Players on your same Wi-Fi network can see your Mac's local LAN IP address, chosen display name, character skin, in-game actions, and visual waypoint pings. Aerithal has no text chat or voice chat.</li>
+        <li><strong>Disabling Co-op:</strong> Toggle <strong>Wi-Fi Co-op</strong> off anytime in <strong>Settings</strong> or via the globe icon in the <strong>Pause</strong> menu to stop local discovery and close incoming connections immediately.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. System APIs &amp; Sandbox Permissions</h2>
+      <ul>
+        <li><strong>Local Network (<code>network.client</code> / <code>network.server</code>):</strong> Used strictly for Same-Wi-Fi LAN discovery and co-op sessions.</li>
+        <li><strong>Game Controllers:</strong> Optional Bluetooth and USB Xbox/PlayStation controller support via Apple's native <code>GameController.framework</code>.</li>
+        <li><strong>Required-Reason System APIs:</strong> Standard macOS/Electron runtime APIs declared in <code>PrivacyInfo.xcprivacy</code> for local app preferences (<code>UserDefaults</code>, <code>CA92.1</code>), simulation timing (<code>SystemBootTime</code>, <code>35F9.1</code>), file timestamps (<code>FileTimestamp</code>, <code>C617.1</code>), and storage availability (<code>DiskSpace</code>, <code>E174.1</code>). Never used for tracking or fingerprinting.</li>
+        <li><strong>No Sensitive Hardware Access:</strong> Aerithal never requests camera, microphone, location, contacts, or photo library access.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Third-Party Services &amp; Support Emails</h2>
+      <p>Aerithal contains no third-party analytics, advertising SDKs, external CDN requests, or social sign-ins. All fonts, audio, artwork, and engine libraries are bundled locally inside the app.</p>
+      <p>If you voluntarily email us for customer support, we use your email address and message solely to respond to and resolve your inquiry, and you may request deletion of support correspondence at any time. Our static legal and support web pages include no analytics scripts, advertising cookies, or tracking forms (the hosting provider processes standard web requests to deliver the pages).</p>
+    </section>
+
+    <section>
+      <h2>6. Children's Privacy</h2>
+      <p>Aerithal does not collect personal information from anyone, including children under 13 (or the applicable age of digital consent in your region). Because Aerithal has no user accounts, no internet servers, no chat features, and no data collection, families can play offline or locally with peace of mind, and may disable <strong>Wi-Fi Co-op</strong> in Settings for solo-only play.</p>
+    </section>
+
+    <section>
+      <h2>7. Policy Updates &amp; Contact</h2>
+      <p>If future versions of Aerithal change how data or networking is handled, we will update this page and its Effective Date before releasing those changes.</p>
+      <p><strong>Developer:</strong> Keegan Porter / K.Rise.Media<br>
+      <strong>Support &amp; Privacy Contact:</strong> <a href="mailto:k.rise.media@gmail.com?subject=Aerithal%20Privacy">k.rise.media@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div>&copy; 2026 Keegan Porter / Krise Media. All rights reserved.</div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="support.html">Support</a>
+    </div>
+  </footer>
+</body>
+</html>

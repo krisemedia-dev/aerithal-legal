@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms of Use (EULA) — Aerithal</title>
+  <meta name="description" content="Terms of Use and End User License Agreement (EULA) for Aerithal on macOS by Keegan Porter / Krise Media.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%23161028'/%3E%3Cpath d='M8 2L10 6L14 8L10 10L8 14L6 10L2 8L6 6Z' fill='%23f2c255'/%3E%3Crect x='7' y='7' width='2' height='2' fill='%2378f8ff'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #0b0910;
+      --surface: #14101d;
+      --surface2: #1c1628;
+      --border: #3a2e4a;
+      --ink: #f4ecd8;
+      --dim: #c6baa0;
+      --mute: #8e826e;
+      --gold: #f2c255;
+      --teal: #5fe3d0;
+      --mono: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(ellipse 80% 45% at 50% -10%, rgba(102, 72, 148, 0.24), transparent 70%),
+        radial-gradient(ellipse 50% 35% at 85% 15%, rgba(242, 194, 85, 0.08), transparent 60%),
+        var(--bg);
+      display: flex;
+      flex-direction: column;
+    }
+    a { color: var(--teal); text-decoration: none; }
+    a:hover { color: var(--gold); text-decoration: underline; }
+    header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(11, 9, 16, 0.88);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav-wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--mono);
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+    .brand:hover { text-decoration: none; color: #ffe39b; }
+    .diamond {
+      width: 12px;
+      height: 12px;
+      background: var(--teal);
+      transform: rotate(45deg);
+      box-shadow: 0 0 0 2px var(--gold), 0 0 10px rgba(95, 227, 208, 0.45);
+      flex-shrink: 0;
+    }
+    nav { display: flex; gap: 18px; flex-wrap: wrap; font-size: 0.92rem; }
+    nav a { color: var(--dim); padding: 4px 2px; border-bottom: 2px solid transparent; }
+    nav a:hover { color: var(--ink); text-decoration: none; }
+    nav a.active { color: var(--gold); border-bottom-color: var(--gold); font-weight: 600; }
+    main { max-width: 880px; width: 100%; margin: 0 auto; padding: 40px 24px 64px; flex: 1; }
+    .hero { margin-bottom: 30px; }
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 8px;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(1.85rem, 4vw, 2.45rem);
+      line-height: 1.2;
+      color: var(--gold);
+    }
+    .meta { color: var(--mute); font-size: 0.9rem; font-family: var(--mono); }
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 26px 28px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin: 0 0 14px;
+      font-size: 1.2rem;
+      color: var(--gold);
+      border-bottom: 1px solid rgba(58, 46, 74, 0.7);
+      padding-bottom: 8px;
+    }
+    p { margin: 0 0 12px; color: var(--dim); }
+    p:last-child { margin-bottom: 0; }
+    ul { margin: 0 0 12px; padding-left: 20px; color: var(--dim); }
+    ul:last-child { margin-bottom: 0; }
+    li { margin-bottom: 8px; }
+    li strong { color: var(--ink); }
+    .legal-caps {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-size: 0.9rem;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      text-align: center;
+      color: var(--mute);
+      font-size: 0.86rem;
+    }
+    footer .links { margin-top: 8px; display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; }
+    @media (max-width: 600px) {
+      main { padding: 28px 16px 48px; }
+      section { padding: 20px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-wrap">
+      <a class="brand" href="index.html"><span class="diamond" aria-hidden="true"></span>Aerithal</a>
+      <nav aria-label="Legal navigation">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html" class="active" aria-current="page">Terms of Use</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="eyebrow">End User License Agreement</div>
+      <h1>Terms of Use</h1>
+      <div class="meta">Effective Date: November 24, 2026 &middot; Aerithal for macOS (com.krisemedia.aerithal)</div>
+    </div>
+
+    <section>
+      <h2>1. Agreement &amp; Mac App Store Terms</h2>
+      <p>By downloading, installing, or playing <strong>Aerithal</strong> ("the App"), you agree to these Terms of Use ("Terms"). When downloaded via the Mac App Store, these Terms supplement Apple's Standard Licensed Application End User License Agreement ("Standard EULA"):</p>
+      <ul>
+        <li>These Terms are solely between you and <strong>Keegan Porter / Krise Media</strong> ("Licensor"), not Apple Inc. ("Apple").</li>
+        <li>Apple is not responsible for the App, its content, maintenance, or customer support.</li>
+        <li>If any provision conflicts with Apple's Mac App Store Usage Rules or Standard EULA, Apple's Usage Rules and Standard EULA govern to the extent required.</li>
+        <li>Apple and its subsidiaries are third-party beneficiaries of these Terms and may enforce them against you upon your acceptance.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>2. Limited Software License</h2>
+      <p>Subject to these Terms and Apple's Usage Rules, Keegan Porter / Krise Media grants you a personal, non-exclusive, non-transferable, revocable license to install and run Aerithal on macOS computers that you own or control for personal, non-commercial entertainment.</p>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Redistribute, sell, rent, lease, sublicense, or commercially exploit the App or its bundled assets beyond Mac App Store Family Sharing and Usage Rules.</li>
+        <li>Reverse-engineer, decompile, disassemble, or extract source code, textures, audio, or models to build derivative commercial products, except where expressly permitted by law.</li>
+        <li>Remove or obscure copyright, trademark, or attribution notices included with the App.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Local World Saves &amp; Backups</h2>
+      <p>All saved worlds, character profiles, custom skins, and settings are stored strictly on your Mac inside the macOS App Sandbox. Krise Media does not operate cloud save servers and cannot recover lost or deleted worlds.</p>
+      <p>You are solely responsible for backing up your Mac (for example, using Time Machine) to safeguard your saved worlds against hardware failure, OS reinstalls, app removal, or accidental deletion.</p>
+    </section>
+
+    <section>
+      <h2>4. Optional Same-Wi-Fi (LAN) Co-op &amp; User Responsibility</h2>
+      <p>Aerithal supports optional peer-to-peer multiplayer for up to 6 players strictly over your local Wi-Fi (LAN) network:</p>
+      <ul>
+        <li><strong>Trusted Networks Only:</strong> When <strong>Wi-Fi Co-op</strong> is enabled, other players on the same Wi-Fi network running a matching version of Aerithal can discover and join your world. Turn <strong>Wi-Fi Co-op</strong> off in Settings or the Pause menu when connected to public or untrusted Wi-Fi networks.</li>
+        <li><strong>Shared World Changes:</strong> Guests who join your world can break or place blocks, access chests, and interact with creatures and bosses. Only host for people you trust.</li>
+        <li><strong>No Moderation / Parental Oversight:</strong> Aerithal has no text chat, voice chat, or internet servers, and Krise Media does not monitor local network play. Hosts and parents/guardians are responsible for supervising local co-op sessions.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Intellectual Property &amp; Streaming</h2>
+      <p>Aerithal—including its title, logo, original voxel art, textures, 3D models, realms, music, sound effects, and code—is owned by <strong>Keegan Porter / Krise Media</strong> and protected by copyright and intellectual property laws.</p>
+      <p><strong>Gameplay Videos &amp; Streams:</strong> You may freely capture, stream, and monetize gameplay videos and screenshots of Aerithal (e.g., on YouTube or Twitch), provided you do not imply official endorsement by Krise Media or redistribute raw game assets. Bundled open-source libraries remain governed by their respective licenses.</p>
+    </section>
+
+    <section>
+      <h2>6. Updates &amp; Version Compatibility</h2>
+      <p>Krise Media may provide updates or fixes through the Mac App Store, but makes no commitment to supply ongoing content updates or support discontinued macOS releases. Players in a Same-Wi-Fi co-op session must run matching versions of Aerithal.</p>
+    </section>
+
+    <section>
+      <h2>7. Disclaimer of Warranties</h2>
+      <div class="legal-caps">
+        TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, AERITHAL IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTIES OF ANY KIND, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.
+      </div>
+      <p>If the App fails to conform to an applicable warranty, you may notify Apple for a refund of the purchase price (if any) under Mac App Store policies; to the maximum extent permitted by law, Apple has no other warranty obligation.</p>
+    </section>
+
+    <section>
+      <h2>8. Limitation of Liability</h2>
+      <div class="legal-caps">
+        TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, KEEGAN PORTER / KRISE MEDIA SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF DATA, SAVED WORLDS, PROFITS, OR GOODWILL ARISING FROM YOUR USE OF OR INABILITY TO USE AERITHAL. TOTAL AGGREGATE LIABILITY SHALL NOT EXCEED THE AMOUNT YOU PAID FOR THE APP IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM (OR $10.00 USD IF OBTAINED FREE OF CHARGE).
+      </div>
+      <p>Some jurisdictions do not allow certain disclaimers or limitations; those limits apply only to the extent permitted by applicable law.</p>
+    </section>
+
+    <section>
+      <h2>9. Export Compliance, Governing Law &amp; Contact</h2>
+      <p>You confirm that you are not located in a U.S.-embargoed country or on any U.S. Government list of prohibited or restricted parties. These Terms are governed by applicable U.S. and state law, subject to mandatory consumer protections where you live. We may revise these Terms by updating this page and its Effective Date.</p>
+      <p><strong>Developer / Publisher:</strong> Keegan Porter / K.Rise.Media<br>
+      <strong>Contact:</strong> <a href="mailto:k.rise.media@gmail.com?subject=Aerithal%20Legal">k.rise.media@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div>&copy; 2026 Keegan Porter / Krise Media. All rights reserved.</div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="support.html">Support</a>
+    </div>
+  </footer>
+</body>
+</html>
