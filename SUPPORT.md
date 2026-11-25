@@ -9,16 +9,17 @@ Welcome to the official support guide for **Aerithal** on macOS (by Keegan Porte
 - **Operating System:** macOS 13.0 (Ventura) or later
 - **Hardware:** Mac with Apple Silicon (M1 or newer) and Metal/WebGL2-capable GPU
 - **Input:** Keyboard & Mouse / Trackpad, or Bluetooth/USB Xbox (Series X|S, One, 360) and PlayStation (DualSense PS5, DualShock 4) controllers via macOS `GameController.framework`
-- **Network:** Optional — 100% playable offline in solo mode; local Wi-Fi (LAN) required only for Same-Wi-Fi co-op (up to 6 players)
+- **Network:** Optional — 100% playable offline in solo mode and over local Wi-Fi (LAN) without internet; an internet connection is required only for **Play-Anywhere 6-Character Join Code** co-op (up to 6 players)
+- **Audio / Microphone:** Optional — a Mac microphone or headset is required only if you wish to speak in **In-Game Voice Chat** during co-op (listen-only mode works automatically without a microphone)
 
 ---
 
 ## Quick Start
 
 1. **Create Your Character:** On first launch, enter a display name and choose either a **Preset** skin or design your own in the **Custom** skin maker, then click the gold checkmark.
-2. **Start a World:** Click **Play** → click the **+** card → pick a world name (optional custom seed) → click **Create**.
+2. **Start a World:** Click **Play** → click the **+** card → pick a world name (optional custom seed) → click **Create**. Every new world spawns safely across 14 varied scenic overworld biomes.
 3. **Explore & Craft:** Gather wood and stone with **Left Click**, press **`E`** to open Inventory & Crafting, place a **Workbench** with **Right Click**, and build your way through **five realms** and **six bosses**.
-4. **Pause & Auto-Save:** Press **`Esc`** at any time to pause, adjust settings, toggle **Wi-Fi Co-op**, or return to the Title screen. Aerithal auto-saves when pausing, exiting a world, or closing the window.
+4. **Pause, Co-op & Auto-Save:** Press **`Esc`** at any time to pause, copy your world's **6-character Join Code**, toggle **Co-op**, mute your mic, adjust Settings, or return to the Title screen. Aerithal auto-saves when pausing, exiting a world, or closing the window.
 
 ---
 
@@ -50,6 +51,8 @@ Every keyboard and auxiliary-mouse bind can be remapped under **Settings → Con
 | World Atlas Map (Surface & Subterranean Caverns) | `M` |
 | Co-op Waypoint Ping Beacon | `C` |
 | Call Nearest Tamed Roc (Whistle) | `G` |
+| Mute / Unmute Mic (Co-op Voice Chat) | `U` |
+| Push to Talk (when enabled in Settings) | Hold `T` |
 | Camera View (1st / 3rd Behind / 3rd Front) | `F5` |
 | Player Roster | Hold `Tab` |
 | Toggle HUD | `F1` |
@@ -91,16 +94,28 @@ Pair your controller in **System Settings → Bluetooth** or connect via USB—A
 
 ---
 
-## Same-Wi-Fi Co-op Troubleshooting
+## Co-op & Voice Chat Troubleshooting
 
-Aerithal supports **1–6 players** on the same local Wi-Fi (LAN) network with zero server setup:
+Aerithal supports **1–6 players** (1 host + 5 guests) with zero account creation or server setup—either over your local Wi-Fi or across different networks using a 6-character Join Code.
 
-1. **Same Wi-Fi Network:** Confirm every Mac is connected to the exact same Wi-Fi network/subnet (avoid guest Wi-Fi networks with "AP/Client Isolation" enabled).
-2. **Wi-Fi Co-op Toggle:** On the host Mac, open **Settings** (gear icon) or the **Pause** menu and confirm **Wi-Fi Co-op** (globe icon) is turned **on**.
+### Same-Wi-Fi (LAN) Co-op
+1. **Same Wi-Fi Network:** Confirm every Mac is connected to the exact same Wi-Fi network/subnet (avoid hotel or campus guest Wi-Fi with "AP/Client Isolation" enabled).
+2. **Enable Co-op:** On the host Mac, open **Settings** or the **Pause** menu and confirm **Co-op** (globe icon) is turned **on**.
 3. **macOS Local Network Permission:** Open **System Settings → Privacy & Security → Local Network** and make sure **Aerithal** is enabled on both the host and joining Macs.
 4. **macOS Firewall:** If the macOS Firewall is enabled (**System Settings → Network → Firewall**), verify that Aerithal is allowed to accept incoming connections.
-5. **Matching App Versions:** All players must run the same version and build of Aerithal. If you see an **Update Required** or **Version Mismatch** notice, update Aerithal from the Mac App Store on all Macs.
-6. **World Full:** Each world supports up to **6 concurrent players** (1 host + 5 guests).
+5. **Matching App Versions:** All players must run the same version and build of Aerithal. Update from the Mac App Store if you see an **Update Required** or **Version Mismatch** notice.
+
+### Play-Anywhere 6-Character Join Codes
+1. **Sharing Your Code (Host):** While loaded inside your world with **Co-op** enabled, press **`Esc`** to open the **Pause** menu and click your world's **6-character Join Code** badge to copy it to your clipboard. Each world keeps its own persistent Join Code—share it only with friends you trust.
+2. **Joining by Code (Guest):** On the Title screen, open **Join**, paste or type the host's 6-character Join Code, and connect.
+3. **"World Offline" Notice:** No active host was found for that Join Code. Make sure the host is currently loaded inside that world (not on the Title screen), has **Co-op** enabled, is connected to the internet, and double-check the 6 characters.
+4. **"Connection Failed" Notice:** Your Macs found each other's signaling info, but a direct peer-to-peer WebRTC route could not be completed. Check your internet connection, temporarily disable strict VPNs or corporate/school firewalls that block UDP/WebRTC traffic, and confirm macOS Firewall allows Aerithal. If you are on the same Wi-Fi network, join directly from the automatic Same-Wi-Fi list instead.
+
+### In-Game Voice Chat
+1. **Auto-Activates in Co-op Only:** Voice Chat activates automatically when **2 or more players** are in the same world and **Voice Chat** is enabled in **Settings**. Your microphone is never accessed during solo play.
+2. **Open Mic vs. Push to Talk:** Open **Settings** to toggle **Voice Chat**, adjust the **Voice** volume slider, or enable **Push to Talk** (hold **`T`** to speak instead of open mic). Press **`U`** anytime (or click the microphone icon in the **Pause** menu) to mute or unmute your microphone.
+3. **macOS Microphone Permission:** If friends cannot hear you, open **System Settings → Privacy & Security → Microphone** and make sure **Aerithal** is toggled **on**, then verify your input device in **System Settings → Sound → Input**.
+4. **Listen-Only Fallback:** If you decline macOS microphone permission or have no microphone connected, Aerithal automatically switches to **Listen-Only** mode so you can still hear your friends without interruption.
 
 ---
 

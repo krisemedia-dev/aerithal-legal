@@ -1,6 +1,6 @@
 # Terms of Use & End User License Agreement (EULA) — Aerithal
 
-**Effective Date:** November 24, 2026  
+**Effective Date:** November 25, 2026  
 **Developer / Publisher:** Keegan Porter / Krise Media  
 **Application:** Aerithal for macOS (`com.krisemedia.aerithal`, Apple ID `6838527951`)
 
@@ -40,13 +40,14 @@ All worlds, structures, character profiles, custom skins, and settings in Aerith
 
 ---
 
-## 4. Optional Same-Wi-Fi (LAN) Co-op & User Responsibility
+## 4. Optional Co-op Multiplayer, Voice Chat & User Responsibility
 
-Aerithal offers optional peer-to-peer co-op multiplayer for up to 6 players **strictly over your local Wi-Fi (LAN) network**.
+Aerithal offers optional peer-to-peer co-op multiplayer for up to 6 players over both **Same-Wi-Fi (LAN)** networks and **Play-Anywhere 6-Character Join Codes**, together with optional live peer-to-peer **In-Game Voice Chat**:
 
-- **Private Network Use:** When **Wi-Fi Co-op** is enabled, anyone on your same local Wi-Fi network running a matching version of Aerithal may discover and join your active world. You are solely responsible for choosing trusted local networks and toggling **Wi-Fi Co-op** off on public, shared, or untrusted Wi-Fi networks (such as cafes, hotels, schools, or airports).
-- **World Modifications by Guests:** Friends who join your hosted world can place or break blocks, open chests, and interact with entities in your world. Host worlds only with people you trust.
-- **Conduct & Parental Supervision:** Aerithal contains no text chat, voice chat, or internet servers, and Krise Media does not moderate local network sessions. Hosts and parents/guardians are responsible for supervising local co-op play on their home network.
+- **Share Join Codes & Networks Only With People You Trust:** When **Co-op** is enabled, players on your same local Wi-Fi network—or anyone who has your world's 6-character Join Code—running a matching version of Aerithal can join your active world. Only share your Join Code with people you trust, and toggle **Co-op** off in **Settings** or the **Pause** menu when connected to public, shared, or untrusted Wi-Fi networks (such as cafes, hotels, schools, or airports).
+- **World Modifications by Guests:** Friends who join your hosted world can place or break blocks, open chests, and interact with creatures and bosses in your world. Host worlds only with people you trust.
+- **Unmoderated Live Peer-to-Peer Voice Chat:** Optional in-game voice chat streams live peer-to-peer between players in the same world when 2 or more players are connected. Krise Media does **not** monitor, record, store, or moderate live peer-to-peer voice chat or world sessions. Players and parents/guardians are solely responsible for conduct and supervision during multiplayer sessions, and may mute their microphone (`U`), switch to **Push to Talk** (`T`), or disable **Voice Chat** and/or **Co-op** at any time in **Settings** or the **Pause** menu.
+- **Third-Party Relay Availability:** Play-Anywhere Join Code matchmaking relies on third-party public STUN servers and public signaling relays provided strictly **"as available"** with no uptime or connectivity guarantee. Same-Wi-Fi (LAN) co-op and solo play work completely offline without an internet connection.
 
 ---
 
@@ -62,7 +63,7 @@ Open-source components bundled inside Aerithal (such as Electron, Chromium, Thre
 
 ## 6. Updates & Availability
 
-Krise Media may release updates, bug fixes, or feature improvements through the Mac App Store, but has no obligation to provide ongoing updates, new content, or perpetual support for older macOS versions. Co-op players must run the same version and build of Aerithal to join one another's worlds.
+Krise Media may release updates, bug fixes, or feature improvements through the Mac App Store, but has no obligation to provide ongoing updates, new content, or perpetual support for older macOS versions. Co-op players (both Same-Wi-Fi LAN and Join Code sessions) must run the same version and build of Aerithal to join one another's worlds.
 
 ---
 

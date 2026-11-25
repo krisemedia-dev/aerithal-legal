@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy — Aerithal</title>
-  <meta name="description" content="Privacy Policy for Aerithal on macOS by Keegan Porter / Krise Media. Zero data collection, local saves, Same-Wi-Fi LAN co-op only.">
+  <meta name="description" content="Privacy Policy for Aerithal on macOS by Keegan Porter / Krise Media. Zero data collection, local saves, encrypted peer-to-peer co-op and unrecorded live voice chat.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%23161028'/%3E%3Cpath d='M8 2L10 6L14 8L10 10L8 14L6 10L2 8L6 6Z' fill='%23f2c255'/%3E%3Crect x='7' y='7' width='2' height='2' fill='%2378f8ff'/%3E%3C/svg%3E">
   <style>
     :root {
@@ -189,7 +189,7 @@
     <div class="hero">
       <div class="eyebrow">App Store Privacy Policy</div>
       <h1>Privacy Policy</h1>
-      <div class="meta">Effective Date: November 24, 2026 &middot; Aerithal for macOS (com.krisemedia.aerithal)</div>
+      <div class="meta">Effective Date: November 25, 2026 &middot; Aerithal for macOS (com.krisemedia.aerithal)</div>
     </div>
 
     <div class="summary-grid" aria-label="Privacy highlights">
@@ -206,8 +206,8 @@
         <p>Worlds, character skins, and settings stay inside your Mac's sandbox.</p>
       </div>
       <div class="pill-card">
-        <strong>Same-Wi-Fi LAN Only</strong>
-        <p>Optional co-op runs strictly over your private local network—no internet servers.</p>
+        <strong>Encrypted P2P Co-op &amp; Voice</strong>
+        <p>Optional LAN &amp; Join Code co-op plus live unrecorded P2P voice—no developer servers.</p>
       </div>
     </div>
 
@@ -219,16 +219,16 @@
         <li><strong>Tracking Domains:</strong> None.</li>
         <li><strong>Collected Data Types:</strong> None (App Store Privacy Label: <em>Data Not Collected</em>).</li>
       </ul>
-      <p>Aerithal makes <strong>no outbound internet connections</strong> during solo or local co-op play.</p>
+      <p>Aerithal makes <strong>no outbound internet connections</strong> during solo play or Same-Wi-Fi (LAN) co-op. Optional Play-Anywhere remote co-op connects peer-to-peer solely to establish your session and never sends data to Krise Media.</p>
     </section>
 
     <section>
       <h2>2. Data Stored Locally on Your Mac</h2>
       <p>Aerithal saves your progress and preferences strictly inside your macOS App Sandbox container (<code>~/Library/Containers/com.krisemedia.aerithal/Data/Library/Application Support/Aerithal/</code>):</p>
       <ul>
-        <li><strong>World Saves (IndexedDB — <code>aerithal</code>):</strong> World names, seeds, creation and last-played timestamps, time of day, boss progression, preview thumbnails, voxel block edits across all five realms, chest inventories, entities, and player positions/inventories.</li>
+        <li><strong>World Saves (IndexedDB — <code>aerithal</code>):</strong> World names, seeds, per-world 6-character Join Code metadata, creation and last-played timestamps, time of day, boss progression, preview thumbnails, voxel block edits across all five realms, chest inventories, entities, and player positions/inventories.</li>
         <li><strong>Player Profile (<code>localStorage</code>):</strong> A locally generated random UUID, your chosen in-game display name, and your preset or custom character skin.</li>
-        <li><strong>Settings (<code>localStorage</code>):</strong> Audio volume levels, view distance, FOV, mouse sensitivity, invert-Y preference, shader toggle, Wi-Fi Co-op toggle, mount camera preference, and custom keybindings.</li>
+        <li><strong>Settings (<code>localStorage</code>):</strong> Audio volume levels (including <strong>Voice</strong> volume), view distance, FOV, mouse sensitivity, invert-Y preference, shader toggle, <strong>Co-op</strong> toggle, <strong>Voice Chat</strong> toggle, <strong>Push to Talk</strong> toggle, mount camera preference, and custom keybindings.</li>
       </ul>
       <div class="callout">
         <strong>Your Control:</strong> Delete any world from the <strong>Worlds</strong> screen by hovering over its card and holding the <strong>&times;</strong> button. Uninstalling Aerithal removes the app; removing its sandbox container deletes all local data. Krise Media has no access to your files.
@@ -236,36 +236,56 @@
     </section>
 
     <section>
-      <h2>3. Optional Same-Wi-Fi (LAN) Co-op Networking</h2>
-      <p>Aerithal includes optional co-op play for up to 6 players <strong>strictly over your local Wi-Fi (LAN) network</strong>. Aerithal does not connect to internet matchmaking servers, public lobbies, or third-party WebRTC relays.</p>
+      <h2>3. Optional Co-op Networking &amp; In-Game Voice Chat</h2>
+      <p>Aerithal includes optional peer-to-peer co-op play for up to 6 players over <strong>Same-Wi-Fi (LAN)</strong> and <strong>Play-Anywhere 6-Character Join Codes</strong>, plus optional live peer-to-peer <strong>In-Game Voice Chat</strong>. Solo play works 100% offline with zero network or microphone access.</p>
+
+      <h3>Same-Wi-Fi (LAN) Co-op</h3>
       <ul>
-        <li><strong>macOS Local Network Permission:</strong> macOS asks for Local Network access so friends on the same Wi-Fi can discover and join your world. Solo play works completely offline even if you decline this permission or disable <strong>Wi-Fi Co-op</strong>.</li>
-        <li><strong>Hosting Discovery:</strong> When <strong>Wi-Fi Co-op</strong> is enabled in <strong>Settings</strong> or the <strong>Pause</strong> menu while hosting a world, Aerithal broadcasts small local-only UDP discovery packets (port <code>41234</code>, multicast <code>239.255.42.99</code>, and local subnet broadcast) containing the world name, your chosen display name, player count, app version/build, a random per-launch instance ID, and the host's local TCP port.</li>
-        <li><strong>Joining &amp; Private-Network Enforcement:</strong> On the Title and Join screens, Aerithal sends a local UDP probe to list active worlds on your Wi-Fi network and joins via direct local TCP. Aerithal enforces a strict private-IP filter (RFC 1918, link-local, and loopback addresses only) so co-op traffic never leaves your local network.</li>
-        <li><strong>Shared Session Information:</strong> Players on your same Wi-Fi network can see your Mac's local LAN IP address, chosen display name, character skin, in-game actions, and visual waypoint pings. Aerithal has no text chat or voice chat.</li>
-        <li><strong>Disabling Co-op:</strong> Toggle <strong>Wi-Fi Co-op</strong> off anytime in <strong>Settings</strong> or via the globe icon in the <strong>Pause</strong> menu to stop local discovery and close incoming connections immediately.</li>
+        <li><strong>macOS Local Network Permission:</strong> macOS asks for Local Network access (<code>NSLocalNetworkUsageDescription</code>) so friends on the same Wi-Fi can discover and join your world. Solo play works completely offline even if you decline this permission or disable <strong>Co-op</strong>.</li>
+        <li><strong>Hosting Discovery &amp; Direct Local TCP:</strong> When <strong>Co-op</strong> is enabled in <strong>Settings</strong> or the <strong>Pause</strong> menu while hosting a world, Aerithal broadcasts small local-only UDP discovery packets (port <code>41234</code>, multicast <code>239.255.42.99</code>, and local subnet broadcast) containing the world name, your chosen display name, player count, app version/build, a random per-launch instance ID, and the host's local TCP port. On the Title and Join screens, Aerithal probes port <code>41234</code> locally and connects via direct local TCP restricted to private LAN IP ranges (RFC 1918, link-local, and loopback).</li>
+      </ul>
+
+      <h3>Play-Anywhere Remote Co-op (6-Character Join Codes)</h3>
+      <ul>
+        <li><strong>End-to-End Encrypted Ephemeral Signaling:</strong> When hosting or joining remotely with a 6-character Join Code, Aerithal exchanges end-to-end <strong>AES-256-GCM encrypted</strong> ephemeral signaling messages (with the signaling topic and encryption key derived locally from the 6-character code) over public signaling relays (<code>ntfy.sh</code> and public MQTT-over-WSS brokers) and public STUN servers (<code>stun.l.google.com</code>, <code>stun.cloudflare.com</code>) solely to establish a direct peer-to-peer <strong>WebRTC</strong> connection (DTLS-encrypted).</li>
+        <li><strong>IP Address Visibility:</strong> During remote co-op, your public IP address is visible to the STUN servers, signaling relays, and the peers you connect with—standard to peer-to-peer WebRTC networking.</li>
+        <li><strong>Zero Developer Servers or Logs:</strong> Keegan Porter / Krise Media operates no game servers, relays, or databases, and receives or stores no networking logs or session data.</li>
+      </ul>
+
+      <h3>Optional In-Game Voice Chat</h3>
+      <ul>
+        <li><strong>Co-op Only (Never Accessed in Solo Play):</strong> Aerithal uses your Mac's microphone (<code>NSMicrophoneUsageDescription</code> / <code>com.apple.security.device.audio-input</code>) <strong>only</strong> when <strong>2 or more players</strong> are in the same world and <strong>Voice Chat</strong> is enabled in Settings. Your microphone is never accessed during solo play.</li>
+        <li><strong>Live Peer-to-Peer Audio — Never Recorded:</strong> Voice audio streams live peer-to-peer via encrypted WebRTC (<strong>DTLS-SRTP</strong>) and is <strong>never recorded, stored, logged, or routed through developer servers</strong>.</li>
+        <li><strong>Player Controls &amp; Listen-Only Mode:</strong> Mute or unmute anytime with <code>U</code> (or the Pause menu mic icon), switch to <strong>Push to Talk</strong> (<code>T</code>), adjust <strong>Voice</strong> volume, turn <strong>Voice Chat</strong> off in Settings, or decline microphone access to stay in automatic <strong>Listen-Only</strong> mode.</li>
+      </ul>
+
+      <h3>Shared Session Info &amp; Disabling Co-op</h3>
+      <ul>
+        <li><strong>What Peers See &amp; Hear:</strong> Connected co-op players can see your chosen display name, character skin, in-game actions, visual waypoint pings, and—if Voice Chat is enabled—hear live peer-to-peer voice audio. Aerithal has no text chat.</li>
+        <li><strong>Disabling Co-op:</strong> Toggle <strong>Co-op</strong> off anytime in <strong>Settings</strong> or via the globe icon in the <strong>Pause</strong> menu to stop local discovery, halt Join Code signaling, and close incoming connections immediately.</li>
       </ul>
     </section>
 
     <section>
       <h2>4. System APIs &amp; Sandbox Permissions</h2>
       <ul>
-        <li><strong>Local Network (<code>network.client</code> / <code>network.server</code>):</strong> Used strictly for Same-Wi-Fi LAN discovery and co-op sessions.</li>
+        <li><strong>Network (<code>network.client</code> / <code>network.server</code> / <code>NSLocalNetworkUsageDescription</code>):</strong> Used strictly for optional Same-Wi-Fi LAN discovery/co-op and optional Play-Anywhere peer-to-peer WebRTC co-op.</li>
+        <li><strong>Microphone (<code>com.apple.security.device.audio-input</code> / <code>NSMicrophoneUsageDescription</code>):</strong> Used strictly for optional co-op voice chat when 2 or more players share a world and Voice Chat is enabled—never accessed in solo play.</li>
         <li><strong>Game Controllers:</strong> Optional Bluetooth and USB Xbox/PlayStation controller support via Apple's native <code>GameController.framework</code>.</li>
-        <li><strong>Required-Reason System APIs:</strong> Standard macOS/Electron runtime APIs declared in <code>PrivacyInfo.xcprivacy</code> for local app preferences (<code>UserDefaults</code>, <code>CA92.1</code>), simulation timing (<code>SystemBootTime</code>, <code>35F9.1</code>), file timestamps (<code>FileTimestamp</code>, <code>C617.1</code>), and storage availability (<code>DiskSpace</code>, <code>E174.1</code>). Never used for tracking or fingerprinting.</li>
-        <li><strong>No Sensitive Hardware Access:</strong> Aerithal never requests camera, microphone, location, contacts, or photo library access.</li>
+        <li><strong>Required-Reason System APIs:</strong> Standard macOS/Chromium runtime APIs declared in <code>PrivacyInfo.xcprivacy</code> for local app preferences (<code>UserDefaults</code>, <code>CA92.1</code>), simulation timing (<code>SystemBootTime</code>, <code>35F9.1</code>), file timestamps (<code>FileTimestamp</code>, <code>C617.1</code>), and storage availability (<code>DiskSpace</code>, <code>E174.1</code>). Never used for tracking or fingerprinting.</li>
+        <li><strong>No Camera, Location, Contacts, or Photos Access:</strong> Aerithal never requests or accesses your camera, location, contacts, or photo library.</li>
       </ul>
     </section>
 
     <section>
       <h2>5. Third-Party Services &amp; Support Emails</h2>
-      <p>Aerithal contains no third-party analytics, advertising SDKs, external CDN requests, or social sign-ins. All fonts, audio, artwork, and engine libraries are bundled locally inside the app.</p>
+      <p>Aerithal contains no third-party analytics, advertising SDKs, external CDN requests, or social sign-ins. All fonts, audio, artwork, and engine libraries are bundled locally inside the app. When you use optional Play-Anywhere Join Code co-op, Aerithal contacts standard public STUN servers and public signaling relays solely to broker encrypted ephemeral peer-to-peer WebRTC connections—no user accounts or tracking identifiers are sent.</p>
       <p>If you voluntarily email us for customer support, we use your email address and message solely to respond to and resolve your inquiry, and you may request deletion of support correspondence at any time. Our static legal and support web pages include no analytics scripts, advertising cookies, or tracking forms (the hosting provider processes standard web requests to deliver the pages).</p>
     </section>
 
     <section>
       <h2>6. Children's Privacy</h2>
-      <p>Aerithal does not collect personal information from anyone, including children under 13 (or the applicable age of digital consent in your region). Because Aerithal has no user accounts, no internet servers, no chat features, and no data collection, families can play offline or locally with peace of mind, and may disable <strong>Wi-Fi Co-op</strong> in Settings for solo-only play.</p>
+      <p>Aerithal does not collect personal information from anyone, including children under 13 (or the applicable age of digital consent in your region). Because Aerithal has no user accounts, no developer servers, and no data collection, families can play offline or locally with peace of mind, and parents/guardians can disable <strong>Co-op</strong> and/or <strong>Voice Chat</strong> in Settings at any time for solo-only or silent play.</p>
     </section>
 
     <section>
